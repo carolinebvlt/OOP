@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
   <title>Document</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li title="Créer une classes et des objets" onclick="show('page1.html')">1</li>
+        <li title="Manipuler un objet" onclick="show('page2.html')">2</li>
+        <li title="Encapsulation" onclick="show('page3.html')">3</li>
+        <li title="Constructeurs" onclick="show('page4.html')">4</li>
+        <li title="Autoloading" onclick="show('page5.html')">5</li>
+        <li title="Opérateur de résolution de portée" onclick="show('page6.html')">6</li>
+      </ul>
+    </nav>
+  </header>
   <div id="mainBox">
-    <button type="button" name="start" onclick="show('first.html')">Start</button>
+    <h1>Programmation Orientée Objet avec PHP : explications et exercices</h1>
+    <p id="description">
+      Aide à la compréhension et à la réalisation du <a href="https://openclassrooms.com/courses/programmez-en-oriente-objet-en-php">tutoriel d'Openclassrooms</a>
+      dédié à ce sujet.
+    </p>
+    <p id="footerHome"><i>By CeaB<br/> Last update : 13-04-2018</i></p>
   </div>
 <script src="ajax.js"></script>
+<script src="page3.js"></script>
 </body>
 </html>

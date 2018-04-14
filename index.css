@@ -50,7 +50,7 @@ h2{
   padding: 10vh 0 5vh 0;
 }
 h3{
-  padding: 5vh 0 50px 0;
+  padding: 5vh 0 0 0;
 }
 p, ul{
   font-size: 1.2em;
@@ -109,5 +109,6 @@ img, .code, .var_dump{
 }
 #demo_page3{
   border: solid black 1px;
+  width: 60%;
   margin: auto;
 }

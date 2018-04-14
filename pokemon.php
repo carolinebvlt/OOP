@@ -18,6 +18,8 @@ $pokemon_1 = new Pokemon;
 $pokemon_2 = new Pokemon;
 $pokemon_1->attaquer($pokemon_2);
 
+$premier_pokemon->attaquer();
+
 
 echo '<pre>';
 var_dump($premier_pokemon);

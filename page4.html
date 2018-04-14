@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="page4.css">
+<h2>Encapsulation</h2>
+<p>
+  C'est une "technique" spécifique à la POO. Il s'agit de bloquer l'accès <i>direct</i>
+  à un attribut ou une fonction depuis l'extérieur de sa classe.
+</p>
+<p>
+  La principale utilité de l'encapsulation est
+  l'assurance de la validité du type et de la valeur des attributs des objets.
+</p>
+<h3>1. Explication générale</h3>
+<p>
+  Si l'on reprend l'exemple des Pokémon, l'attribut XP est un entier (int).<br/>
+  Si par mégarde, a un endroit du code <span class="chucho">(dans l'<i>index.php</i> par exemple)</span>,
+  on lui attribue une chaîne de caractères <span class="chucho">(erreur typique: "20" au lieu de 20)</span>,
+  il y aura un bug lorsqu'un pokémon appellera la fonction <i>attaquer()</i> et que PHP tentera de faire XP + 1.
+</p>
+<p>
+  En ayant recours à l'encapsulation, un message d'erreur s'affichera au moment où l'on essayera
+  d'attribuer une valeur de type incorrect à un objet.
+</p>
+<p>
+  Par ailleurs, tout le monde sait qu'un pokémon, ça évolue ! <br/>
+  Mettons que l'on veuille qu'un pokémon évolue lorsqu'il atteint les 50 pts d'XP.<br/>
+  Grâce à l'encapsulation, il suffira de préciser qu'au moment ou XP >= 50,
+  le pokémon doit appeler la fonction <i>evoluer()</i>.
+</p>
+<h3>2. Les mots-clés <b>"public", "private",</b> et <b>"protected"</b></h3>
+<p>
+  Lorsqu'un attribut ou une fonction est précédé(e) du mot-clé <b>public</b>,
+  il n'y a pas d'encapsulation : on peut donc y accéder depuis n'importe quel
+  endroit du code et assigner n'importe quelle valeur aux attributs.
+  <img src="codes/public.png" alt="">
+  <img src="var_dump/public.png" alt="">
+</p>
+<p>
+  Lorsque le mot-clé <b>private</b> est utilisé, il y a encapsulation :
+  on ne peut pas y accéder de manière <i>directe</i> en dehors de la classe.
+  <img src="codes/private.png" alt="">
+  <img src="var_dump/private.png" alt="">
+</p>
+<p>
+  Le mot-clé <b>protected</b> est quasi identique à <b>private</b>,
+  sauf que les objets créés avec une classe qui hérite d'une autre ont accès aux attributs
+  et fonctions "protected" de la classe parent.<br/>
+   <span class="chucho">On parlera de l'héritage plus loin... c'est juste pour info, là !</span>
+</p>
+<h3>3. Encapsulation des attributs</h3>
+<p>
+  Encapsulons l'attribut XP avec le mot-clé <b>private</b>.
+  C'est une bonne chose de faite. Mais un attribut <i>totalement inaccessible</i>
+  n'a pas lieu d'être ! On va donc créer un accès <i>indirect</i>
+  obligeant le passage par une étape de vérification. <br/>
+</p>
+<p>
+  Cet accès <i>indirect</i> ce fait grâce à un accesseur et un mutateur
+  <span class="chucho">(getter et setter)</span>.
+  Il s'agit de deux fonctions que l'on va ajouter dans la classe.
+  La première servant à accéder à la valeur d'un attribut,
+  et la seconde, à la modifier après vérification.
+  <img src="codes/encapsulation_attribut.png" alt="">
+</p>
+<p>
+  Ceci :
+  <img src="codes/getter.png" alt="">
+  donnera donc ça :
+  <img src="var_dump/getter.png" alt="">
+  et ceci :
+  <img src="codes/setter.png" alt="">
+  donnera ça :
+  <img src="var_dump/setter.png" alt="">
+</p>
+
+<h3>4. Encapsulation des fonctions</h3>
+<p>
+  Dans ce cas là, l'utilité est moins évidente. Je dirais que c'est plus
+  une commodité rendant le code plus clair
+  pour toute personne ayant à travailler dessus.<br/>
+  C'est également intéressant lorsque l'on utilise un IDE qui génère
+  automatiquement la documentation sur les classes.
+</p>
+<p>
+  Une fonction <b>private</b> est une fonction interne à une classe,
+  qu'on n'aura jamais besoin d'appeler en dehors de celle-ci.<br/>
+  Pour l'exemple, mettons que la classe pokemon ait une fonction
+  <b>public</b> <i>endormir_jusque_lundi_prochain()</i>
+  <span class="chucho">(Sorry, panne d'inspiration...)</span> :
+  <img src="codes/endormir_full.png" alt="">
+</p>
+<p>
+  Il peut être intéressant d'isoler le morceau de code qui calcule la date
+  du prochain lundi pour pouvoir l'utiliser dans d'autres fonctions au sein de cette classe,
+  et de la déclarer <b>private</b> par soucis de clareté
+  <span class="chucho">(en voyant le <b>private</b>, on sait que c'est une fonction
+    interne à la classe, "secondaire")</span> :
+  <img src="codes/endormir_clean.png" alt="">
+</p>

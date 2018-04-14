@@ -1,7 +1,6 @@
 <h2>$this</h2>
 <p>
-  En PHP, "$this" est utilisé dans le cadre de la POO pour faire référence à <i>l'objet appelant</i>
-  <span class="chucho">(appelant un attribut ou une fonction)</span>.<br/>
+  En PHP, "$this" est utilisé dans le cadre de la POO pour faire référence à <i>l'objet appelant</i>.<br/>
   Explication par l'exemple :
 </p>
 <p>
@@ -19,19 +18,21 @@
   Une erreur sera alors soulevée si un pokémon essaye d'attaquer une aubergine.
 </p>
 <p>
-  On utilise le symbole "->" pour <i>appeler</i> la fonction <i>subir_degats</i> de la cible,
+  On utilise le symbole "->" pour appeler la fonction <i>subir_degats</i> de la cible,
   avec les dégâts en paramètres.
 </p>
 <p>
-  Pour la partie concernant le gain d'XP, on utilise "$this", car on
-  <i>appelle</i> l'attribut XP du pokémon qui attaque afin de lui ajouter 1 pt.<br/>
+  Pour la partie concernant le gain d'XP, on utilise "$this" pour
+  accéder à l'attribut XP du pokémon qui attaque afin de lui ajouter 1 pt
+  <b>car c'est lui qui appelle la fonction <i>attaquer()</i></b><br/>
   ----------------------
 </p>
 <p>
   <img src="codes/subir_degats.png" alt="">
 </p>
 <p>
-  Dans ce cas-ci, "$this" fait référence au pokémon cible, car c'est lui qui subit les dégâts.
+  Dans ce cas-ci, "$this" fait référence au pokémon cible,
+  <b>car c'est lui qui appelle la fonction <i>subir_degats()</i></b>.
 </p>
 <div id="demo_page3" >
   <h3 style="padding:30px 0 0 0;">Pas encore tout à fait clair ?</h3>

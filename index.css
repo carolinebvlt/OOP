@@ -104,7 +104,10 @@ img, .code, .var_dump{
   width: 50%;
   margin: auto;
 }
-#pokemon_page3 div{
-  text-align: center;
+#pokemon_1, #pokemon_2, #dev{
   display: none;
+}
+#demo_page3{
+  border: solid black 1px;
+  margin: auto;
 }

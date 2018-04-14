@@ -1,7 +1,7 @@
 <h2>$this</h2>
 <p>
   En PHP, "$this" est utilisé dans le cadre de la POO pour faire référence à <i>l'objet appelant</i>
-  <span class="chucho">(un attribut ou une fonction)</span>.<br/>
+  <span class="chucho">(appelant un attribut ou une fonction)</span>.<br/>
   Explication par l'exemple :
 </p>
 <p>
@@ -33,8 +33,8 @@
 <p>
   Dans ce cas-ci, "$this" fait référence au pokémon cible, car c'est lui qui subit les dégâts.
 </p>
-<h3>Pas encore tout à fait clair ?</h3>
-<section>
+<div id="demo_page3" >
+  <h3 style="padding:30px 0 0 0;">Pas encore tout à fait clair ?</h3>
   <aside id="pokemon_page3">
     <div id="pokemon_1">
       <img  class="pokemon" src="pokemon/bulbi.png" alt=""><br/>
@@ -47,19 +47,19 @@
       <aside id="xp_2">XP : 10 </aside>
     </div>
   </aside>
-  <p>
-    <span id="enonce">Instancie un pokémon stocké dans une variable "$pokemon_1" :</span><br/>
-    <input class="incode" type="text" id="input_instanciation" value="$" />
-  </p>
   <div id="toHideAfter">
+    <p>
+      <span id="enonce">Instancie un pokémon stocké dans une variable "$pokemon_1" :</span><br/>
+      <input class="incode" type="text" id="input_instanciation" value="$" />
+    </p>
     <p>
       <span class="chucho">(Sans espaces "de décoration" autour d'un "=" par exemple, et n'oubliez pas le ";" à la fin !)</span>
     </p>
     <p>
-      <input type="button" value="Ok" onclick="checkAnswer(input_instanciation)"/>
+      <input type="button" value="Ok" onclick="checkAnswer(input_instanciation)"/><br/>
     </p>
   </div>
-  <p id="dev" >
+  <div id="dev">
     <p>
       Que s'est-il passé ?
     </p>
@@ -74,11 +74,15 @@
       PHP va donc remplacer le "$this" par "$pokemon_2" et "$degats" par 5.<br/>
       <img src="codes/subir_degats_replace.png" alt=""/>
     </p>
-  </p>
-</section>
+  </div>
+</div>
+
 <p>
-  <input type="button" value="Vérifier que j'ai bien compris" onclick="show('page3.html')"/>
+  <input type="button" value="Vérifier que j'ai bien compris" onclick="getExo('this.html',this_exo)"/>
+</p>
+<p id="this_exo">
 </p>
 <p>
+  ---------------------- <br/>
   <input type="button" value="Next" onclick="show('page4.html')"/>
 </p>

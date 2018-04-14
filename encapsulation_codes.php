@@ -26,6 +26,7 @@ class Pokemon
     return $next_monday = $today->add($interval);
   }
 
+
   public function getDate_reveil()
   {
 

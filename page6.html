@@ -1,0 +1,25 @@
+<h2>L'auto-chargement (ou <i>autoloading</i>)</h2>
+<p>
+  Cette fonctionnalité de PHP est très pratique.<br/>
+  En POO, on l'utilise notamment pour l'auto-chargement des classes, c'est-à-dire,
+  ne pas devoir taper la ligne <i>include</i> chaque fois que l'on a besoin d'une classe.<br/>
+  En effet, la meilleure façon de travailler est d'avoir un fichier par classe, qu'on inclus
+  dans l'index.php par exemple.
+</p>
+<p>
+  On commence par écrire une fonction de chargement de classe universelle/réutilisable
+  qui indique le chemin vers le dossier où sont les classes :
+  <img src="codes/chargerClasse.png" alt="">
+</p>
+<p>
+  Ensuite, on enregistre cette fonction avec la fonction <i>spl_autoload_register()</i> :
+  <img src="codes/spl.png" alt="">
+</p>
+<p>
+  Et le tour est joué ! Si le fichier <i>'Pokemon.php'</i> contenant ma classe se situe
+  bien dans <i>'mes_classes/'</i>, ceci fonctionnera sans problème :
+  <img src="codes/autoload.png" alt="">
+</p>
+<p>
+  <input type="button" value="Next" onclick="show('page7.html')"/>
+</p>

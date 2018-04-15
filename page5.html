@@ -1,19 +1,47 @@
-<h2>Les constructeurs</h2>
-<p>
-  Un constructeur est une fonction appelée lors de l'instanciation d'un object
-  afin de le construire d'une certaine manière. <br/>
-  Il s'agit de la fonction <i>__construct()</i>.
-</p>
-<p>
-  Reprenons encore et toujours la classe Pokemon. Ajoutons un constructeur
-  afin de pouvoir créer des pokémons avec des attributs différents,
-  sauf les PV, toujours = à 20 à l'instanciation :
-  <img src="codes/constructeur.png" alt="">
-  On peut ensuite créer des pokémon différents :
-  <img src="codes/pokemons.png" alt="">
-  Et lorsqu'on fait un var_dump de pokemon1 et pokemon2, on obtient ceci :
-  <img src="var_dump/constructeur.png" alt="">
-</p>
-<p>
-  <input type="button" value="Next" onclick="show('page6.html')"/>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/common.css"/>
+  <link rel="stylesheet" href="../assets/css/page5.css"/>
+  <title>Constructeurs</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li title="Créer une classe et des objets"><a href="page1.html">1</a></li>
+        <li title="Manipuler un objet"><a href="page2.html">2</a></li>
+        <li title="$this"><a href="page3.html">3</a></li>
+        <li title="Encapsulation"><a href="page4.html">4</a></li>
+        <li title="Constructeurs"><a href="page5.html">5</a></li>
+        <li title="Autoloading"><a href="page6.html">6</a></li>
+        <!-- <li title="Opérateur de résolution de portée" onclick="show('page7.html')">7</li> -->
+      </ul>
+    </nav>
+  </header>
+  <h2>Les constructeurs</h2>
+  <p>
+    Un constructeur est une fonction appelée lors de l'instanciation d'un object
+    afin de le construire d'une certaine manière. <br/>
+    Il s'agit de la fonction <i>__construct()</i>.
+  </p>
+  <p>
+    Reprenons encore et toujours la classe Pokemon. Ajoutons un constructeur
+    afin de pouvoir créer des pokémons avec des attributs différents,
+    sauf les PV, toujours = à 20 à l'instanciation :
+    <img class="code" src="../assets/img/codes/constructeur.png" alt="">
+    On peut ensuite créer des pokémon différents :
+    <img src="../assets/img/codes/pokemons.png" alt="">
+    Et lorsqu'on fait un var_dump de pokemon1 et pokemon2, on obtient ceci :
+    <img class="code" src="../assets/img/var_dump/constructeur.png" alt="">
+  </p>
+  <p>
+    <a class="center" href="page6.html"><input class="next_btn" type="button" value="Next : Autoloading"></a>
+  </p>
+
+</body>
+</html>

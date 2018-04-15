@@ -1,0 +1,127 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+header{
+  height: 10vh;
+  box-shadow: 2px 5px 20px rgba(255, 185, 22, 0.5);
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+nav ul{
+  height: 10vh;
+  margin-top: 0;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  line-height: 10vh;
+}
+nav ul li{
+  display: inline-block;
+}
+nav li:hover{
+  cursor: pointer;
+  font-weight: bold;
+}
+nav a {
+  color: rgb(255, 185, 22);
+  font-size: 1.3em;
+  text-decoration: none;
+}
+h2,h3{
+  color: rgb(255, 185, 22);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 5vh;
+  font-family: 'Roboto Mono', monospace;
+}
+h2{
+  padding: 10vh 0 5vh 0;
+}
+h3{
+  padding: 5vh 0 0 0;
+}
+p, ul{
+  font-size: 1.3em;
+  color: rgb(122, 122, 122);
+  line-height: 30px;
+  padding: 0;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+ul{
+  text-align: left;
+  width: 30%;
+}
+.chucho{
+  font-size: 0.7em;
+}
+.center{
+  display:block;
+  margin:auto;
+  text-align: center;
+  text-decoration: none;
+}
+img {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+.code{
+  width: 100%;
+}
+.next_btn{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: rgb(255, 185, 22);
+  color: white;
+  font-weight: bold;
+}
+.next_btn:hover{
+  cursor: pointer;
+  background-color: rgba(255, 185, 22, 0.5);
+  color: grey;
+}
+.exos_btn{
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: rgb(127,255,0);
+  color: white;
+  font-weight: bold;
+}
+.exos_btn:hover{
+  cursor: pointer;
+  background-color: rgba(127,255,0, 0.5) ;
+  color: grey;
+}
+
+.incode{
+  background-color: #F9F9F9;
+  width: 100%;
+  line-height: 30px;
+  font-size: 1.1em;
+}
+.pokemon{
+  width: 100px;
+  display: inline-block;
+}
+#pokemon_page3{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+}
+#pokemon_1, #pokemon_2, #dev{
+  display: none;
+}

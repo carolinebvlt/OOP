@@ -1,0 +1,35 @@
+#mainBox{
+  min-height: 90vh;
+  width: 100%;
+}
+h1{
+  color: rgb(255, 185, 22);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 20vh;
+  padding-top: 10vh;
+}
+#description{
+  width: 35%;
+  margin: auto;
+  font-size: 1.3em;
+  line-height: 50px;
+  height: 25vh;
+  padding-top: 5vh;
+  color: rgb(122, 122, 122);
+  line-height: 30px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#footerHome{
+  font-size: 1em;
+  height: 20vh;
+  padding-top: 10vh;
+  color: rgb(122, 122, 122);
+  line-height: 30px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}

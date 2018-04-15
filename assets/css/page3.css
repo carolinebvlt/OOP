@@ -1,0 +1,18 @@
+body{
+  width: 100%;
+  margin: auto;
+}
+#answer1Box{
+  width: 50%;
+  margin: auto;
+}
+#cara, #bulbi {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+}
+#validation{
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}

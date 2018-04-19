@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/common.css"/>
+  <title>Décorticage</title>
+</head>
+<body>
+  <h2>Décorticage de l'énoncé et correctif</h2>
+  <p class="center">
+    Il y a bien entendu de nombreuses façon de construire cette classe. Je vous en propose une.
+  </p>
+  <h3>Contenu de la classe Voiture <span class="chucho">(à priori)</span> :</h3>
+  <ul>
+    <li>
+      Toutes les caractéristiques des points 1 et 2 sont des attributs.
+    </li>
+    <li>
+      On procède à leur encapsulation <span class="chucho">(<b>private</b>)</span>
+    </li>
+    <li>
+      3 fonctions : __construct(), rouler(), display() <br/>
+      + getters/setters nécessaires<br/>
+      <span class="chucho">(Toutes ces fonctions seront appelées depuis l'extérieur
+        de la classe, et doivent donc être <b>public</b>)</span>
+    </li>
+  </ul>
+  <div class="center">
+    <input class="showMe_btn" type="button" value="Show me" onclick="show_me('../../assets/img/codes/garage1.png', garage1)"/>
+  </div>
+  <p id="garage1">
+  </p>
+  <h3>Les attributs</h3>
+  <ul>
+    <li>Immatriculation : string</li>
+    <li>Date de mise en circulation : string, car on va en général encoder quelque
+    chose comme ça "12/04/2001"</li>
+    <li>Kilométrage : int</li>
+    <li>Modèle : string</li>
+    <li>Marque : string</li>
+    <li>Couleur : string</li>
+    <li>Poids : float</li>
+    <li>
+      Status : 2 possibilités <span class="chucho">(<i>free</i> ou <i>reserved</i>)</span>
+      et toujours <i>free</i> sauf si c'est une Audi, donc, changeons le nom de
+      l'attribut en <i>$free</i> et mettons le <i>= true</i> de base.
+    </li>
+    <li>
+      Classe : 2 possibilités aussi, mais il en existe d'autres, donc, pensons
+      au fait que notre garage pourrait un jour s'agrandir et s'occuper d'autres
+      types de véhicules, et mettons un attribut de type : string
+    </li>
+    <li>Origine : string</li>
+    <li>Usure : string</li>
+    <li>Age : int</li>
+  </ul>
+  <h3>Le constructeur</h3>
+  <p>Que devra-t-on placer en paramètre pour instancier une voiture ?</p>
+  <ul>
+    <li>Immatriculation</li>
+    <li>Date de mise en circulation</li>
+    <li>Kilométrage</li>
+    <li>Modèle</li>
+    <li>Marque</li>
+    <li>Couleur</li>
+    <li>Poids</li>
+  </ul>
+  <p class="center"><span class="chucho">(On passe par les setters pour bien vérifier
+    les valeurs et leur type)</span></p>
+  <div class="center">
+    <input class="showMe_btn" type="button" value="Show me" onclick="show_me('../../assets/img/codes/garage2.png', garage2)"/>
+  </div>
+  <p id="garage2">
+  </p>
+  <p>
+    Ensuite, on ajoute les instructions nécessaires à l'attribution de la valeur
+    des autres attributs via l'appel de fonctions dédiées à ces actions :
+  </p>
+  <div class="center">
+    <input class="showMe_btn" type="button" value="Show me" onclick="show_me('../../assets/img/codes/garage3.png', garage3)"/>
+  </div>
+  <p id="garage3">
+  </p>
+  <h3>Fonctions supplémentaires</h3>
+  <p>
+    L'étape suivante consiste en l'écriture de ces nouvelles fonctions.<br/>
+    Vu qu'elles ne sont nécessaires qu'en interne, pour plus de clareté du code,
+    on peut les déclarer <b>private</b>.
+    <div class="center">
+      <input class="showMe_btn" type="button" value="Show me" onclick="show_me_fct_supp(fct_supp)"/>
+    </div>
+    <p id="fct_supp"></div>
+  </p>
+  <p>
+    On aurait très bien pu l'aborder autrement. Par exemple, on aurait pu déléguer
+    tout ça à la classe plutôt qu'aux objets en en faisant des méthodes <b>static</b>,
+    ce qui impliquerait trois changements :
+    <ul>
+      <li>
+        Il ne serait donc plus question de recourir à <i>$this</i>.
+        Il faudrait donc passer l'attribut de base en paramètre.
+      </li>
+      <li>
+        Ces fonctions seront appelées par les objets lors de leur construction,
+       donc depuis l'extérieur de la classe, ce qui impliquerait de les déclarer
+       <b>public</b>.
+      </li>
+      <li>
+        L'instruction dans le constructeur changerait aussi. Il faudrait utiliser
+        le mot-clé <b>self</b>.
+      </li>
+    </ul>
+    <p>
+    Exemple :
+    <div class="center">
+      <input class="showMe_btn" type="button" value="Show me" onclick="show_me('../../assets/img/codes/garage4.png', garage4)"/>
+    </div>
+    <p id="garage4"></p>
+    </p>
+    <p class="center">
+      <span class="chucho">(Pour retenir simplement : ici, le mot-clé <b>self</b>
+        est écrit dans le code de la classe Test. Il appelle donc la fonction
+        <i>is_free()</i> de la classe Test.)</span>
+    </p>
+  </p>
+  <h3>Gestion des modifications</h3>
+  <p>
+    On nous demande deux chose :
+    <ol>
+      <li>
+        Si le kilométrage change, vérifier l'usure. On peut faire ça facilement
+        avec le setter de kilométrage :
+        <div class="center">
+          <input style="font-size:0.8em" class="showMe_btn" type="button" value="Show me" onclick="show_me('../../assets/img/codes/garage_setKm.png', garage_setKm)"/>
+        </div>
+        <p id="garage_setKm" style="width:100%"></p>
+        Et du coup, on peut enlever la ligne concernant l'usure dans le constructeur.
+      </li>
+      <li>
+        Certains attributs ne peuvent pas être modifiés. On va donc mettre leur
+        setter en <b>private</b> pour qu'ils ne puissent pas être appelés en dehors
+        de la classe. Attention tout de même, car cela reste possible depuis l'intérieur.
+        Rappelez-vous donc de cette contrainte en construisant le reste de la classe.
+      </li>
+    </ol>
+  </p>
+  <h3>Finitions</h3>
+  <p>On fini par l'écriture des fonction rouler() et display().</p>
+  <div class="center">
+    <input class="showMe_btn" type="button" value="Show me" onclick="show_me_finitions(finitions)"/>
+  </div>
+  <p id="finitions">
+  </p>
+  <p>
+    Après, il n'y a plus qu'à instancier un objet, puis appeler ses fonctions
+    rouler() et display() pour vérifier que tout fonctionne.
+    <div class="center">
+      <input class="showMe_btn" type="button" value="Show me" onclick="show_me_verif(verif)"/>
+    </div>
+    <p id="verif"></p>
+  </p>
+<script src="../../assets/scripts/show_me.js"></script>
+</body>
+</html>

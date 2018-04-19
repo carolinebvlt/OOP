@@ -12,6 +12,7 @@
   <header>
     <nav>
       <ul>
+        <li title="Home"><a href="index.html">0</a></li>
         <li title="Créer une classe et des objets"><a href="page1.html">1</a></li>
         <li title="Manipuler un objet"><a href="page2.html">2</a></li>
         <li title="$this"><a href="page3.html">3</a></li>
@@ -20,7 +21,9 @@
         <li title="Autoloading"><a href="page6.html">6</a></li>
         <li title="Héritage"><a href="page7.html">7</a></li>
         <li title="Opérateur de résolution de portée"><a href="page8.html">8</a></li>
-        <li title="Constantes de classe"><a href="page9.html">9</a></li>
+        <li title="Constantes"><a href="page9.html">9</a></li>
+        <li title="Static"><a href="page10.html">10</a></li>
+        <li title="Exo du garage"><a href="page11.html">11</a></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +37,7 @@
     Créons une classe générale que l'on appellera <i>Vehicule</i>,
     avec des caractéristiques communes à tous les véhicules :
     <img class="code" src="../assets/img/codes/vehicule.png" alt="">
-    Créons ensuite deux classes plus spécifique, pour pouvoir séparer les bus des trotinettes.
+    Créons ensuite deux classes plus spécifiques, pour pouvoir séparer les bus des trotinettes.
     Ce qu'on veut, c'est qu'elles <b>héritent</b> de tout ce qui est contenu
     dans la classe Vehicule : attributs, fonctions,...
     Et pour faire ça, on ajoute simplement le mot-clé <b>extends</b>
@@ -47,7 +50,7 @@
     <img class="code" src="../assets/img/codes/demo_heritage.png" alt="">
     Ce qui donnera cela :
     <img src="../assets/img/var_dump/demo_heritage.png" alt="">
-    Comme vous le voyez, même s'il n'y a rien d'écrit dans le fichier de la classe Vehicule_sans_moteur,
+    Comme vous le voyez, même s'il n'y a rien d'écrit dans la classe Vehicule_sans_moteur,
     elle a hérité de la fonction <i>rouler()</i>.<br/>
     Pareil pour la classe Vehicule_avec_moteur : grâce au var_dump, on peut voir
     qu'elle a bien hérité de l'attribut <i>nbr_roues</i>.

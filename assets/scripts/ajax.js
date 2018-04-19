@@ -1,11 +1,13 @@
-function show(filePath){
+function show(filePath, box){
   var rq = new XMLHttpRequest();
   rq.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("mainBox").innerHTML =
-      this.responseText;
+      var content = this.responseText;
+      var i = new Image();
+      i.src = content;
     }
   };
+  console.log(filePath);
   rq.open("GET", filePath, true);
   rq.send();
 }
@@ -18,6 +20,7 @@ function getExo(filePath, targetBox){
       this.responseText;
     }
   };
+
   rq.open("GET", filePath, true);
   rq.send();
 }

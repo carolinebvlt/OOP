@@ -12,7 +12,7 @@ header{
 nav ul{
   height: 10vh;
   margin-top: 0;
-  width: 50%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -44,7 +44,7 @@ h2{
 h3{
   padding: 5vh 0 0 0;
 }
-p, ul{
+p, ul, ol{
   font-size: 1.3em;
   color: rgb(122, 122, 122);
   line-height: 30px;
@@ -103,6 +103,19 @@ img {
 .exos_btn:hover{
   cursor: pointer;
   background-color: rgba(127,255,0, 0.5) ;
+  color: grey;
+}
+.showMe_btn{
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1em;
+  background-color: rgb(66, 197, 244);
+  color: white;
+  font-weight: bold;
+}
+.showMe_btn:hover{
+  cursor: pointer;
+  background-color: rgba(66, 197, 244, 0.5) ;
   color: grey;
 }
 

@@ -12,23 +12,80 @@
   <header>
     <nav>
       <ul>
+        <li title="Home"><a href="index.html">0</a></li>
         <li title="Créer une classe et des objets"><a href="page1.html">1</a></li>
         <li title="Manipuler un objet"><a href="page2.html">2</a></li>
         <li title="$this"><a href="page3.html">3</a></li>
         <li title="Encapsulation"><a href="page4.html">4</a></li>
         <li title="Constructeurs"><a href="page5.html">5</a></li>
         <li title="Autoloading"><a href="page6.html">6</a></li>
-        <li title="Opérateur de résolution de portée"><a href="page7.html">7</a></li>
-        <li title="Constantes de classe"><a href="page8.html">8</a></li>
+        <li title="Héritage"><a href="page7.html">7</a></li>
+        <li title="Opérateur de résolution de portée"><a href="page8.html">8</a></li>
+        <li title="Constantes"><a href="page9.html">9</a></li>
+        <li title="Static"><a href="page10.html">10</a></li>
+        <li title="Exo du garage"><a href="page11.html">11</a></li>
       </ul>
     </nav>
   </header>
   <h2>Constantes de classe</h2>
   <p>
-    
+    Comme leur nom l'indique, les constantes de classe sont des <b>valeurs</b> propres
+    à une classe et qui <b>ne varient jamais</b>.
   </p>
   <p>
-    <a class="center" href="page9.html"><input class="next_btn" type="button" value="Next : "></a>
+    Démonstration de leur utilisation dans un exercice reprenant plusieurs concepts :
+  </p>
+  <p>
+    Imaginons une classe Voiture ayant un attribut <i>fiabilité</i>, et
+    déclarons-le <i>protected</i> afin de pouvoir ensuite créer des classes plus
+    spécifiques à différentes marques d'auto qui en héritent toutes. <br/>
+    Mettons pour faire simple qu'il y ait trois possibilités, et représentons-les
+    par une note sur 10 :
+      <ul>
+        <li>10 = marque très fiable</li>
+        <li>5  = marque moyennement fiable</li>
+        <li>1  = marque peu fiable</li>
+      </ul>
+  </p>
+  <p>
+    <img class="code" src="../assets/img/codes/voiture.png" alt="">
+  </p>
+  <p>
+    On déclare une constante avec le mot-clé <b>const</b>.<br/>
+    Par convention, on écrira toujours le nom en Maj. Notez que le fait de pouvoir
+    ainsi nommer les constantes rend le code plus clair/lisible <i class="chucho">(voir plus bas)</i>.
+  </p>
+  <p>
+    Commençons par créer une classe Mercedes afin que les objets-voitures instanciés
+    à partir de cette dernière aient tous un attribut <i>fiabilité</i>, et vu qu'on parle de
+    Mercedes, ils seront tous à 10</span> :
+    <ol>
+      <li>Héritage de la classe Voiture <i>(extends)</i></li>
+      <li>Attribution de la valeur de l'attribut dès l'instanciation de l'objet <i>(__construct())</i></li>
+      <li>Appel de la constante "TRES_FIABLE" de la classe parent <i>(::)</i></li>
+    </ol>
+  </p>
+  <p>
+    Par ailleurs, il faut pouvoir obtenir la note de fiabilité d'une voiture en
+    dehors de sa classe, et ce, pour toutes les marques. On va donc ajouter un accesseur/getter
+    à la classe Voiture :
+  </p>
+  <p>
+    <img class="code" src="../assets/img/codes/constante.png" alt="">
+  </p>
+  <p>
+    Ensuite, on peut créer autant de voitures de marques différentes que l'on veut :
+    <img class="code" src="../assets/img/codes/voitures.png" alt="">
+    <img class="code" src="../assets/img/codes/voitures2.png" alt="">
+    Résultat :
+    <img src="../assets/img/var_dump/voitures2.png" alt="">
+  </p>
+  <p>
+    Remarque : dans ce cas-ci, on aurait pu écrire le mot-clé <b>parent</b> à la
+    place du nom de la classe Voiture pour en appeler les constantes. Essayez !
+  </p>
+  <p>
+    <a class="center" href="page10.html"><input class="next_btn" type="button" value="Next : Attributs et méthodes statiques "></a>
   </p>
 </body>
 </html>

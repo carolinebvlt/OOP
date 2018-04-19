@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/common.css"/>
+  <title>Exo garage</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li title="Home"><a href="index.html">0</a></li>
+        <li title="Créer une classe et des objets"><a href="page1.html">1</a></li>
+        <li title="Manipuler un objet"><a href="page2.html">2</a></li>
+        <li title="$this"><a href="page3.html">3</a></li>
+        <li title="Encapsulation"><a href="page4.html">4</a></li>
+        <li title="Constructeurs"><a href="page5.html">5</a></li>
+        <li title="Autoloading"><a href="page6.html">6</a></li>
+        <li title="Héritage"><a href="page7.html">7</a></li>
+        <li title="Opérateur de résolution de portée"><a href="page8.html">8</a></li>
+        <li title="Constantes"><a href="page9.html">9</a></li>
+        <li title="Static"><a href="page10.html">10</a></li>
+        <li title="Exo du garage"><a href="page11.html">11</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h2>L'exercice du garage</h2>
+  <p class="center">
+    Je reprends ici l'exercice du garage
+    fait chez BeCode lors du parcours "PHP_POO".
+  </p>
+  <h3>Consignes</h3>
+  <p class="center">
+    Objectif : simuler la gestion d'un garage.
+  </p>
+  <ol>
+    <li>
+      Commencez par créer une classe Voiture. Une voiture est d'abord caractérisée par :
+      <ul style="font-size:1em;width:90%;">
+        <li>numéro d'immatriculation</li>
+        <li>date de mise en circulation</li>
+        <li>kilométrage</li>
+        <li>modèle</li>
+        <li>marque</li>
+        <li>couleur</li>
+        <li>poids</li>
+      </ul>
+    </li>
+    <li>
+      Puis, lors de l'instanciation d'une voiture :
+      <ul style="font-size:1em;width:90%;">
+        <li>si c'est une Audi, elle est d'office <i>reserved</i>, sinon, elle est <i>free</i></li>
+        <li>c'est un utilitaire ou commercial, en fonction de son poids (> 3,5 tonnes)</li>
+        <li>le pays d'origine dépend des 2 premiers caractères de l'immatriculation (BE, FR ou DE)</li>
+        <li>déterminez si elle a beaucoup servi <i>low</i>< 100.000 ou <i>middle</i> > 100.000 ou <i>high</i> > 200.000 selon le kilométrage</li>
+        <li>calculez le nombre d'années depuis la mise en circulation</li>
+      </ul>
+    </li>
+    <li>
+      Par après, concernant les changements :
+      <ul style="font-size:1em;width:90%;">
+        <li>si le km change, revérifier le niveau d'usure</li>
+        <li>ne peuvent pas changer : date de mie en circu, immatriculation, modèle, marque</li>
+      </ul>
+    </li>
+    <li>
+      Pour finir :
+      <ul style="font-size:1em;width:90%;">
+        <li>Créez une fonction qui fasse rouler la voiture et passer l'usure de <i>low</i> à <i>high</i></li>
+        <li>Créez une fonction permettant l'affichage de la photo de la voiture
+          avec ses caractéristiques dans un tableau HTML </li>
+      </ul>
+    </li>
+  </ol>
+  <p style="margin-bottom:50px;">
+    <a class="center" href="exos/garage_decorticage.html" target="_blank"><input class="exos_btn" type="button" value="Décorticage de l'énoncé et correctif"></a>
+  </p>
+</body>
+</html>

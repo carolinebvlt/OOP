@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/common.css"/>
-  <link rel="stylesheet" href="../assets/css/page6.css"/>
-  <title>Autoloading</title>
+  <title>Static</title>
 </head>
 <body>
   <header>
@@ -28,30 +27,15 @@
       </ul>
     </nav>
   </header>
-  <h2>L'auto-chargement (ou <i>autoloading</i>)</h2>
-  <p>
-    Cette fonctionnalité de PHP est très pratique.<br/>
-    En POO, on l'utilise notamment pour l'auto-chargement des classes, c'est-à-dire,
-    ne pas devoir taper la ligne <i>include/require</i> chaque fois que l'on a besoin d'une classe.<br/>
-    En effet, la meilleure façon de travailler est d'avoir un fichier par classe, qu'on inclus
-    dans l'index.php par exemple.
+  <h2>Attributs et méthodes statiques</h2>
+  <p class="center">
+    Il s'agit d'attributs et de fonctions propres à une classe.<br/> <span class="chucho">(au moule, pas aux cakes !)</span>
+  </p>
+  <p class="center">
+    En cours de recherche d'exemples...
   </p>
   <p>
-    On commence par écrire une fonction de chargement de classe universelle/réutilisable
-    qui indique le chemin vers le dossier où sont les classes :
-    <img class="code" src="../assets/img/codes/chargerClasse.png" alt="">
-  </p>
-  <p>
-    Ensuite, on enregistre cette fonction avec la fonction <i>spl_autoload_register()</i> :
-    <img class="code" src="../assets/img/codes/spl.png" alt="">
-  </p>
-  <p>
-    Et le tour est joué ! Si le fichier <i>'Pokemon.php'</i> contenant ma classe se situe
-    bien dans <i>'mes_classes/'</i>, ceci fonctionnera sans problème :
-    <img class="code" src="../assets/img/codes/autoload.png" alt="">
-  </p>
-  <p>
-    <a class="center" href="page7.html"><input class="next_btn" type="button" value="Héritage"></a>
+    <a class="center" href="page11.html"><input class="next_btn" type="button" value="Next : l'exo du garage "></a>
   </p>
 </body>
 </html>
